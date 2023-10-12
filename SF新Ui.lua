@@ -114,7 +114,7 @@ function Library:Window(name, game, preset, closebind)
     Switch.Font = Enum.Font.SourceSansBold
     Switch.Text = name
     Switch.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Switch.TextSize = 10.000
+    Switch.TextSize = 20.000
     Switch.TextWrapped = true
 
     SwitchCorner.CornerRadius = UDim.new(0.5, 0)
