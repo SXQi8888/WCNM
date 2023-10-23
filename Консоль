@@ -1,3 +1,4 @@
+
 --MADE BY WARRIOR ROBERR
 -- Version: 3.2
 
@@ -28,36 +29,37 @@ Flymguiv2.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
 Drag.Name = "Drag"
 Drag.Parent = Flymguiv2
 Drag.Active = true
-Drag.BackgroundColor3 = Color3.fromRGB(20, 250, 255)
+Drag.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Drag.BorderSizePixel = 0
 Drag.Draggable = true
-Drag.Position = UDim2.new(0.482438415, 0, 0.454874992, 0)
+Drag.Position = UDim2.new(0.482438415, 0, 0.454874, 0)
 Drag.Size = UDim2.new(0, 237, 0, 27)
 
 FlyFrame.Name = "FlyFrame"
 FlyFrame.Parent = Drag
-FlyFrame.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+FlyFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 FlyFrame.BorderSizePixel = 0
 FlyFrame.Draggable = true
-FlyFrame.Position = UDim2.new(-0.00200000009, 0, 0.989000022, 0)
+FlyFrame.Position = UDim2.new(-0.000000005, 0, 0.69000922, 0)
 FlyFrame.Size = UDim2.new(0, 237, 0, 139)
+
 
 ddnsfbfwewefe.Name = "ddnsfbfwewefe"
 ddnsfbfwewefe.Parent = FlyFrame
-ddnsfbfwewefe.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+ddnsfbfwewefe.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 ddnsfbfwewefe.BorderSizePixel = 0
 ddnsfbfwewefe.Position = UDim2.new(-0.000210968778, 0, -0.00395679474, 0)
 ddnsfbfwewefe.Size = UDim2.new(0, 237, 0, 27)
 ddnsfbfwewefe.Font = Enum.Font.SourceSans
-ddnsfbfwewefe.Text = "欢迎使用SF控制台"
-ddnsfbfwewefe.TextColor3 = Color3.fromRGB(255, 255, 255)
+ddnsfbfwewefe.Text = "SF控制台"
+ddnsfbfwewefe.TextColor3 = Color3.fromRGB(0, 0, 0)
 ddnsfbfwewefe.TextScaled = true
 ddnsfbfwewefe.TextSize = 14.000
 ddnsfbfwewefe.TextWrapped = true
 
 Speed.Name = "Speed"
 Speed.Parent = FlyFrame
-Speed.BackgroundColor3 = Color3.fromRGB(63, 63, 63)
+Speed.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Speed.BorderColor3 = Color3.fromRGB(0, 0, 191)
 Speed.BorderSizePixel = 0
 Speed.Position = UDim2.new(0.445025861, 0, 0.402877688, 0)
@@ -102,37 +104,37 @@ end)
 
 Speeed.Name = "Speeed"
 Speeed.Parent = FlyFrame
-Speeed.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+Speeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
 Speeed.BorderSizePixel = 0
 Speeed.Position = UDim2.new(0.0759493634, 0, 0.402877688, 0)
 Speeed.Size = UDim2.new(0, 87, 0, 32)
 Speeed.ZIndex = 0
 Speeed.Font = Enum.Font.SourceSans
-Speeed.Text = "速度:"
-Speeed.TextColor3 = Color3.fromRGB(255, 255, 255)
+Speeed.Text = "当前速度 : "
+Speeed.TextColor3 = Color3.fromRGB(0, 0, 0)
 Speeed.TextScaled = true
 Speeed.TextSize = 14.000
 Speeed.TextWrapped = true
 
 Stat.Name = "Stat"
 Stat.Parent = FlyFrame
-Stat.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+Stat.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Stat.BorderSizePixel = 0
 Stat.Position = UDim2.new(0.299983799, 0, 0.239817441, 0)
-Stat.Size = UDim2.new(0, 85, 0, 15)
+Stat.Size = UDim2.new(0, 60, 0, 15)
 Stat.Font = Enum.Font.SourceSans
-Stat.Text = "开关:"
+Stat.Text = "开关 : "
 Stat.TextColor3 = Color3.fromRGB(255, 255, 255)
 Stat.TextScaled = true
-Stat.TextSize = 14.000
+Stat.TextSize = 15.000
 Stat.TextWrapped = true
 
 Stat2.Name = "Stat2"
 Stat2.Parent = FlyFrame
-Stat2.BackgroundColor3 = Color3.fromRGB(80, 80, 80)
+Stat2.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Stat2.BorderSizePixel = 0
 Stat2.Position = UDim2.new(0.546535194, 0, 0.239817441, 0)
-Stat2.Size = UDim2.new(0, 27, 0, 15)
+Stat2.Size = UDim2.new(0, 19, 0, 15)
 Stat2.Font = Enum.Font.SourceSans
 Stat2.Text = "Off"
 Stat2.TextColor3 = Color3.fromRGB(255, 0, 0)
@@ -167,7 +169,7 @@ end)
 
 Vfly.Name = "VFly"
 Vfly.Parent = Drag
-Vfly.BackgroundColor3 = Color3.fromRGB(20, 250, 255)
+Vfly.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Vfly.BorderSizePixel = 0
 Vfly.Size = UDim2.new(0, 55, 0, 26)
 Vfly.Font = Enum.Font.SourceSans
@@ -179,7 +181,7 @@ Vfly.TextWrapped = true
 
 Close.Name = "Close"
 Close.Parent = Drag
-Close.BackgroundColor3 = Color3.fromRGB(20, 250, 255)
+Close.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Close.BorderSizePixel = 0
 Close.Position = UDim2.new(0.875, 0, 0, 0)
 Close.Size = UDim2.new(0, 26, 0, 26)
@@ -195,7 +197,7 @@ end)
 
 Minimize.Name = "Minimize"
 Minimize.Parent = Drag
-Minimize.BackgroundColor3 = Color3.fromRGB(20, 250, 255)
+Minimize.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
 Minimize.BorderSizePixel = 0
 Minimize.Position = UDim2.new(0.75, 0, 0, 0)
 Minimize.Size = UDim2.new(0, 26, 0, 26)
@@ -215,6 +217,7 @@ function Mini()
 	end
 end
 Minimize.MouseButton1Click:Connect(Mini)
+
 
 Flyon.Name = "Fly on"
 Flyon.Parent = Flymguiv2
