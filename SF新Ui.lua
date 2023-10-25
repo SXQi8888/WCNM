@@ -116,6 +116,7 @@ function Library:Window(name, game, preset, closebind)
     Switch.TextColor3 = Color3.fromRGB(255, 255, 255)
     Switch.TextSize = 20.000
     Switch.TextWrapped = true
+    Switch.Draggable = true
 
     SwitchCorner.CornerRadius = UDim.new(0.5, 0)
     SwitchCorner.Name = "SwitchCorner"
