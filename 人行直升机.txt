@@ -9,7 +9,7 @@ bruh:AdjustSpeed(0)
 speaker.Character.Animate.Disabled = true
 local hi = Instance.new("Sound")
 hi.Name = "Sound"
-hi.SoundId = "http://www.roblox.com/asset/?id=165113352"
+hi.SoundId = "A"
 hi.Volume = 2
 hi.Looped = true
 hi.archivable = false
@@ -35,7 +35,7 @@ bruh:AdjustSpeed(0)
 speaker.Character.Animate.Disabled = true
 local hi = Instance.new("Sound")
 hi.Name = "Sound"
-hi.SoundId = "http://www.roblox.com/asset/?id=165113352"
+hi.SoundId = "A"
 hi.Volume = 2
 hi.Looped = true
 hi.archivable = false
