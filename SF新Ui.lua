@@ -94,7 +94,7 @@ end
 
 function Library:Window(name, game, preset, closebind)
     CloseBind = closebind or Enum.KeyCode.RightControl
-    PresetColor = preset or Color3.fromRGB(44, 120, 224)
+    PresetColor = preset or Color3.fromRGB(0, 240, 104)
     fs = false
     local Switch = Instance.new("TextButton")
     local SwitchCorner = Instance.new("UICorner")
@@ -116,7 +116,6 @@ function Library:Window(name, game, preset, closebind)
     Switch.TextColor3 = Color3.fromRGB(255, 255, 255)
     Switch.TextSize = 20.000
     Switch.TextWrapped = true
-    Switch.Draggable = true
 
     SwitchCorner.CornerRadius = UDim.new(0.5, 0)
     SwitchCorner.Name = "SwitchCorner"
@@ -127,6 +126,7 @@ function Library:Window(name, game, preset, closebind)
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
     Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
     Main.BorderSizePixel = 0
+    Main.Transparency = 0.5
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 0, 0, 0)
     Main.ClipsDescendants = true
