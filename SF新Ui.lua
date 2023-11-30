@@ -107,6 +107,7 @@ function Library:Window(name, game, preset, closebind)
 
     Switch.Name = "Switch"
     Switch.Parent = UI
+    Switch.Draggable = true
     Switch.Image = "rbxassetid://15504951536"
     Switch.BackgroundTransparency = 1
     Switch.Position = UDim2.new(0.2, 0, 0, 0)
@@ -147,7 +148,7 @@ function Library:Window(name, game, preset, closebind)
     Title.Size = UDim2.new(0, 200, 0, 23)
     Title.Font = Enum.Font.GothamSemibold
     Title.Text = game
-    Title.TextColor3 = Color3.fromRGB(68, 68, 68)
+    Title.TextColor3 = Color3.fromRGB(255, 255, 255)
     Title.TextSize = 12.000
     Title.TextXAlignment = Enum.TextXAlignment.Left
 
