@@ -457,6 +457,7 @@ function Library:Window(name, game, preset, closebind)
 
             Button.Name = "Button"
             Button.Parent = Tab
+            Button.Transparency = 0.5
             Button.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
             Button.Size = UDim2.new(0, 363, 0, 42)
             Button.AutoButtonColor = false
@@ -526,6 +527,7 @@ function Library:Window(name, game, preset, closebind)
 
             Toggle.Name = "Toggle"
             Toggle.Parent = Tab
+            Toggle.Transparency = 0.5
             Toggle.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
             Toggle.Position = UDim2.new(0.215625003, 0, 0.446271926, 0)
             Toggle.Size = UDim2.new(0, 363, 0, 42)
@@ -719,6 +721,7 @@ function Library:Window(name, game, preset, closebind)
 
             Slider.Name = "Slider"
             Slider.Parent = Tab
+            Slider.Transparency = 0.5
             Slider.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
             Slider.Position = UDim2.new(-0.48035714, 0, -0.570532918, 0)
             Slider.Size = UDim2.new(0, 363, 0, 60)
@@ -848,6 +851,7 @@ function Library:Window(name, game, preset, closebind)
 
             Dropdown.Name = "Dropdown"
             Dropdown.Parent = Tab
+            Dropdown.Transparency = 0.5
             Dropdown.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
             Dropdown.ClipsDescendants = true
             Dropdown.Position = UDim2.new(-0.541071415, 0, -0.532915354, 0)
@@ -1051,6 +1055,7 @@ function Library:Window(name, game, preset, closebind)
 
             Colorpicker.Name = "Colorpicker"
             Colorpicker.Parent = Tab
+            Colorpicker.Transparency = 0.5
             Colorpicker.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
             Colorpicker.ClipsDescendants = true
             Colorpicker.Position = UDim2.new(-0.541071415, 0, -0.532915354, 0)
@@ -1499,6 +1504,7 @@ function Library:Window(name, game, preset, closebind)
 
             Label.Name = "Button"
             Label.Parent = Tab
+            Label.Transparency = 0.5
             Label.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
             Label.Size = UDim2.new(0, 363, 0, 42)
             Label.AutoButtonColor = false
@@ -1535,6 +1541,7 @@ function Library:Window(name, game, preset, closebind)
 
             Textbox.Name = "Textbox"
             Textbox.Parent = Tab
+            Textbox.Transparency = 0.5
             Textbox.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
             Textbox.ClipsDescendants = true
             Textbox.Position = UDim2.new(-0.541071415, 0, -0.532915354, 0)
@@ -1599,6 +1606,7 @@ function Library:Window(name, game, preset, closebind)
 
             Bind.Name = "Bind"
             Bind.Parent = Tab
+            Bind.Transparency = 0.5
             Bind.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
             Bind.Size = UDim2.new(0, 363, 0, 42)
             Bind.AutoButtonColor = false
