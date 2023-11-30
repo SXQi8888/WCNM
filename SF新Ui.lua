@@ -96,7 +96,7 @@ function Library:Window(name, game, preset, closebind)
     CloseBind = closebind or Enum.KeyCode.RightControl
     PresetColor = preset or Color3.fromRGB(0, 240, 104)
     fs = false
-    local Switch = Instance.new("TextButton")
+    local Switch = Instance.new("ImageButton")
     local SwitchCorner = Instance.new("UICorner")
     local Main = Instance.new("Frame")
     local TabHold = Instance.new("Frame")
@@ -107,15 +107,10 @@ function Library:Window(name, game, preset, closebind)
 
     Switch.Name = "Switch"
     Switch.Parent = UI
-    Switch.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
-    Switch.BackgroundTransparency = 0.5
+    Switch.Image = "rbxassetid://15504951536"
+    Switch.BackgroundTransparency = 1
     Switch.Position = UDim2.new(0.2, 0, 0, 0)
     Switch.Size = UDim2.new(0, 50, 0, 50)
-    Switch.Font = Enum.Font.SourceSansBold
-    Switch.Text = name
-    Switch.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Switch.TextSize = 20.000
-    Switch.TextWrapped = true
 
     SwitchCorner.CornerRadius = UDim.new(0.5, 0)
     SwitchCorner.Name = "SwitchCorner"
