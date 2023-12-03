@@ -1,6 +1,4 @@
-if game.CoreGui:FindFirstChild("UI") then
-    DestroyUI()
-end
+pcall(DestroyUI())
 local Library = {RainbowColorValue = 0, HueSelectionPosition = 0}
 local UserInputService = game.UserInputService
 local TweenService = game.TweenService
@@ -130,10 +128,15 @@ function Library:Window(name, game, preset, closebind)
 
     TabHold.Name = "TabHold"
     TabHold.Parent = Main
+    TabHold.Active = true
     TabHold.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     TabHold.BackgroundTransparency = 1.000
+    TabHold.BorderSizePixel = 0
     TabHold.Position = UDim2.new(0.0339285731, 0, 0.147335425, 0)
     TabHold.Size = UDim2.new(0, 107, 0, 254)
+    TabHold.CanvasSize = UDim2.new(0, 0, 0, 0)
+    TabHold.ScrollBarThickness = 0
+    TabHold.ScrollingDirection = Enum.ScrollingDirection.Y
 
     TabHoldLayout.Name = "TabHoldLayout"
     TabHoldLayout.Parent = TabHold
@@ -148,8 +151,8 @@ function Library:Window(name, game, preset, closebind)
     Title.Size = UDim2.new(0, 200, 0, 23)
     Title.Font = Enum.Font.GothamSemibold
     Title.Text = game
-    Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Title.TextSize = 12.000
+    Title.TextColor3 = Color3.fromRGB(68, 68, 68)
+    Title.TextSize = 15.000
     Title.TextXAlignment = Enum.TextXAlignment.Left
 
     DragFrame.Name = "DragFrame"
@@ -158,17 +161,17 @@ function Library:Window(name, game, preset, closebind)
     DragFrame.BackgroundTransparency = 1.000
     DragFrame.Size = UDim2.new(0, 560, 0, 41)
 
-    Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
+    Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.5, true)
 
     MakeDraggable(DragFrame, Main)
 
     local uitoggled = false
     function ToggleUI()
         if uitoggled == false then
-            Main:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
+            Main:TweenSize(UDim2.new(0, 0, 0, 0), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.5, true)
             uitoggled = true
         else
-            Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
+            Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, 0.5, true)
             uitoggled = false
         end
     end
@@ -211,7 +214,7 @@ function Library:Window(name, game, preset, closebind)
         NotificationHold.Font = Enum.Font.SourceSans
         NotificationHold.Text = ""
         NotificationHold.TextColor3 = Color3.fromRGB(0, 0, 0)
-        NotificationHold.TextSize = 14.000
+        NotificationHold.TextSize = 15.000
 
         TweenService:Create(
             NotificationHold,
@@ -245,7 +248,7 @@ function Library:Window(name, game, preset, closebind)
         OkayBtn.Font = Enum.Font.SourceSans
         OkayBtn.Text = ""
         OkayBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
-        OkayBtn.TextSize = 14.000
+        OkayBtn.TextSize = 15.000
 
         OkayBtnCorner.CornerRadius = UDim.new(0, 5)
         OkayBtnCorner.Name = "OkayBtnCorner"
@@ -260,7 +263,7 @@ function Library:Window(name, game, preset, closebind)
         OkayBtnTitle.Font = Enum.Font.Gotham
         OkayBtnTitle.Text = textbtn
         OkayBtnTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
-        OkayBtnTitle.TextSize = 14.000
+        OkayBtnTitle.TextSize = 15.000
         OkayBtnTitle.TextXAlignment = Enum.TextXAlignment.Left
 
         NotificationTitle.Name = "NotificationTitle"
@@ -284,7 +287,7 @@ function Library:Window(name, game, preset, closebind)
         NotificationDesc.Font = Enum.Font.Gotham
         NotificationDesc.Text = textdesc
         NotificationDesc.TextColor3 = Color3.fromRGB(255, 255, 255)
-        NotificationDesc.TextSize = 15.000
+        NotificationDesc.TextSize = 16.000
         NotificationDesc.TextWrapped = true
         NotificationDesc.TextXAlignment = Enum.TextXAlignment.Left
         NotificationDesc.TextYAlignment = Enum.TextYAlignment.Top
@@ -336,7 +339,6 @@ function Library:Window(name, game, preset, closebind)
     local tabhold = {}
     function tabhold:Tab(text)
         local TabBtn = Instance.new("TextButton")
-        local TabTitle = Instance.new("TextLabel")
         local TabBtnIndicator = Instance.new("Frame")
         local TabBtnIndicatorCorner = Instance.new("UICorner")
 
@@ -345,21 +347,11 @@ function Library:Window(name, game, preset, closebind)
         TabBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         TabBtn.BackgroundTransparency = 1.000
         TabBtn.Size = UDim2.new(0, 107, 0, 21)
-        TabBtn.Font = Enum.Font.SourceSans
-        TabBtn.Text = ""
-        TabBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
-        TabBtn.TextSize = 14.000
-
-        TabTitle.Name = "TabTitle"
-        TabTitle.Parent = TabBtn
-        TabTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-        TabTitle.BackgroundTransparency = 1.000
-        TabTitle.Size = UDim2.new(0, 107, 0, 21)
-        TabTitle.Font = Enum.Font.Gotham
-        TabTitle.Text = text
-        TabTitle.TextColor3 = Color3.fromRGB(150, 150, 150)
-        TabTitle.TextSize = 14.000
-        TabTitle.TextXAlignment = Enum.TextXAlignment.Left
+        TabBtn.Font = Enum.Font.Gotham
+        TabBtn.Text = text
+        TabBtn.TextColor3 = Color3.fromRGB(150, 150, 150)
+        TabBtn.TextSize = 15.000
+        TabBtn.TextXAlignment = Enum.TextXAlignment.Left
 
         TabBtnIndicator.Name = "TabBtnIndicator"
         TabBtnIndicator.Parent = TabBtn
@@ -402,8 +394,8 @@ function Library:Window(name, game, preset, closebind)
 
         if fs == false then
             fs = true
-            TabBtnIndicator.Size = UDim2.new(0, 13, 0, 2)
-            TabTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
+            TabBtnIndicator.Size = UDim2.new(0, 15, 0, 2)
+            TabBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
             Tab.Visible = true
         end
 
@@ -425,19 +417,19 @@ function Library:Window(name, game, preset, closebind)
                             true
                         )
                         TabBtnIndicator:TweenSize(
-                            UDim2.new(0, 13, 0, 2),
+                            UDim2.new(0, 15, 0, 2),
                             Enum.EasingDirection.Out,
                             Enum.EasingStyle.Quart,
                             .2,
                             true
                         )
                         TweenService:Create(
-                            v.TabTitle,
+                            v,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                             {TextColor3 = Color3.fromRGB(150, 150, 150)}
                         ):Play()
                         TweenService:Create(
-                            TabTitle,
+                            TabBtn,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                             {TextColor3 = Color3.fromRGB(255, 255, 255)}
                         ):Play()
@@ -445,6 +437,8 @@ function Library:Window(name, game, preset, closebind)
                 end
             end
         )
+        
+        TabHold.CanvasSize = UDim2.new(0, 0, 0, TabHoldLayout.AbsoluteContentSize.Y)
         local tabcontent = {}
         function tabcontent:Button(text, callback)
             local Button = Instance.new("TextButton")
