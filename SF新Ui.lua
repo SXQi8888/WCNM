@@ -336,6 +336,7 @@ function Library:Window(name, game, preset, closebind)
     local tabhold = {}
     function tabhold:Tab(text)
         local TabBtn = Instance.new("TextButton")
+        local TabTitle = Instance.new("TextLabel")
         local TabBtnIndicator = Instance.new("Frame")
         local TabBtnIndicatorCorner = Instance.new("UICorner")
 
@@ -344,11 +345,21 @@ function Library:Window(name, game, preset, closebind)
         TabBtn.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
         TabBtn.BackgroundTransparency = 1.000
         TabBtn.Size = UDim2.new(0, 107, 0, 21)
-        TabBtn.Font = Enum.Font.Gotham
-        TabBtn.Text = text
-        TabBtn.TextColor3 = Color3.fromRGB(150, 150, 150)
-        TabBtn.TextSize = 15.000
-        TabBtn.TextXAlignment = Enum.TextXAlignment.Left
+        TabBtn.Font = Enum.Font.SourceSans
+        TabBtn.Text = ""
+        TabBtn.TextColor3 = Color3.fromRGB(0, 0, 0)
+        TabBtn.TextSize = 14.000
+
+        TabTitle.Name = "TabTitle"
+        TabTitle.Parent = TabBtn
+        TabTitle.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+        TabTitle.BackgroundTransparency = 1.000
+        TabTitle.Size = UDim2.new(0, 107, 0, 21)
+        TabTitle.Font = Enum.Font.Gotham
+        TabTitle.Text = text
+        TabTitle.TextColor3 = Color3.fromRGB(150, 150, 150)
+        TabTitle.TextSize = 14.000
+        TabTitle.TextXAlignment = Enum.TextXAlignment.Left
 
         TabBtnIndicator.Name = "TabBtnIndicator"
         TabBtnIndicator.Parent = TabBtn
@@ -391,8 +402,8 @@ function Library:Window(name, game, preset, closebind)
 
         if fs == false then
             fs = true
-            TabBtnIndicator.Size = UDim2.new(0, 15, 0, 2)
-            TabBtn.TextColor3 = Color3.fromRGB(255, 255, 255)
+            TabBtnIndicator.Size = UDim2.new(0, 13, 0, 2)
+            TabTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
             Tab.Visible = true
         end
 
@@ -414,19 +425,19 @@ function Library:Window(name, game, preset, closebind)
                             true
                         )
                         TabBtnIndicator:TweenSize(
-                            UDim2.new(0, 15, 0, 2),
+                            UDim2.new(0, 13, 0, 2),
                             Enum.EasingDirection.Out,
                             Enum.EasingStyle.Quart,
                             .2,
                             true
                         )
                         TweenService:Create(
-                            v,
+                            v.TabTitle,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                             {TextColor3 = Color3.fromRGB(150, 150, 150)}
                         ):Play()
                         TweenService:Create(
-                            TabBtn,
+                            TabTitle,
                             TweenInfo.new(.3, Enum.EasingStyle.Quad, Enum.EasingDirection.Out),
                             {TextColor3 = Color3.fromRGB(255, 255, 255)}
                         ):Play()
@@ -434,8 +445,6 @@ function Library:Window(name, game, preset, closebind)
                 end
             end
         )
-        
-        TabHold.CanvasSize = UDim2.new(0, 0, 0, TabHoldLayout.AbsoluteContentSize.Y)
         local tabcontent = {}
         function tabcontent:Button(text, callback)
             local Button = Instance.new("TextButton")
