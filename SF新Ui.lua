@@ -98,7 +98,7 @@ function Library:Window(name, game, preset, closebind)
     fs = false
     local Switch = Instance.new("ImageButton")
     local SwitchCorner = Instance.new("UICorner")
-    local Main = Instance.new("Frame")
+    local Main = Instance.new("ImageLabel")
     local TabHold = Instance.new("Frame")
     local TabHoldLayout = Instance.new("UIListLayout")
     local Title = Instance.new("TextLabel")
@@ -119,10 +119,9 @@ function Library:Window(name, game, preset, closebind)
 
     Main.Name = "Main"
     Main.Parent = UI
+    Main.Image = "rbxassetid://15757824796"
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
-    Main.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
-    Main.BorderSizePixel = 0
-    Main.Transparency = 0.5
+    Main.BackgroundTransparency = 0.5
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
     Main.Size = UDim2.new(0, 0, 0, 0)
     Main.ClipsDescendants = true
