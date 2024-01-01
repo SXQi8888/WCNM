@@ -94,7 +94,7 @@ end
 
 function Library:Window(name, game, preset, closebind)
     CloseBind = closebind or Enum.KeyCode.RightControl
-    PresetColor = preset or Color3.fromRGB(0, 240, 104)
+    PresetColor = preset or Color3.fromRGB(0, 240, 231)
     fs = false
     local Switch = Instance.new("ImageButton")
     local SwitchCorner = Instance.new("UICorner")
@@ -120,6 +120,7 @@ function Library:Window(name, game, preset, closebind)
     Main.Name = "Main"
     Main.Parent = UI
     Main.Image = "rbxassetid://15757824796"
+    Main.BorderSizePixel = 0
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
     Main.BackgroundTransparency = 0.5
     Main.Position = UDim2.new(0.5, 0, 0.5, 0)
@@ -143,12 +144,12 @@ function Library:Window(name, game, preset, closebind)
     Title.Parent = Main
     Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     Title.BackgroundTransparency = 1.000
-    Title.Position = UDim2.new(0.0339285731, 0, 0.0564263314, 0)
+    Title.Position = UDim2.new(0.5, 0, 0.0564263314, 0)
     Title.Size = UDim2.new(0, 200, 0, 23)
     Title.Font = Enum.Font.GothamSemibold
     Title.Text = game
     Title.TextColor3 = Color3.fromRGB(255, 255, 255)
-    Title.TextSize = 12.000
+    Title.TextSize = 20
     Title.TextXAlignment = Enum.TextXAlignment.Left
 
     DragFrame.Name = "DragFrame"
