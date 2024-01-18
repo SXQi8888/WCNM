@@ -119,7 +119,7 @@ function Library:Window(name, game, preset, closebind)
 
     Main.Name = "Main"
     Main.Parent = UI
-    Main.Image = "rbxassetid://15757824796"
+    Main.Image = "rbxassetid://16025559433"
     Main.BorderSizePixel = 0
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
     Main.BackgroundTransparency = 0.5
