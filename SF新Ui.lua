@@ -110,7 +110,8 @@ function Library:Window(name, game, preset, closebind)
     Switch.Draggable = true
     Switch.Image = "rbxassetid://15512382151"
     Switch.BackgroundTransparency = 1
-    Switch.Position = UDim2.new(0.2, 0, 0, 0)
+    Switch.AnchorPoint = Vector2.new(0.5, 0.5)
+    Switch.Position = UDim2.new(0.5, 0, 0.5, 0)
     Switch.Size = UDim2.new(0, 50, 0, 50)
 
     SwitchCorner.CornerRadius = UDim.new(0.5, 0)
@@ -119,7 +120,7 @@ function Library:Window(name, game, preset, closebind)
 
     Main.Name = "Main"
     Main.Parent = UI
-    Main.Image = "rbxassetid://16025559433"
+    Main.Image = "rbxassetid://16669673325"
     Main.BorderSizePixel = 0
     Main.AnchorPoint = Vector2.new(0.5, 0.5)
     Main.BackgroundTransparency = 0.5
@@ -157,8 +158,6 @@ function Library:Window(name, game, preset, closebind)
     DragFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
     DragFrame.BackgroundTransparency = 1.000
     DragFrame.Size = UDim2.new(0, 560, 0, 41)
-
-    Main:TweenSize(UDim2.new(0, 560, 0, 319), Enum.EasingDirection.Out, Enum.EasingStyle.Quart, .6, true)
 
     MakeDraggable(DragFrame, Main)
 
