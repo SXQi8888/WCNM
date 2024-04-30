@@ -1,14 +1,18 @@
-if game.CoreGui:FindFirstChild("UI") then
-    DestroyUI()
-end
 local Library = {RainbowColorValue = 0, HueSelectionPosition = 0}
-local UserInputService = game.UserInputService
-local TweenService = game.TweenService
-local RunService = game.RunService
-local Mouse = game.Players.LocalPlayer:GetMouse()
+local UserInputService = game:GetService("UserInputService")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
+local LP = game.Players.LocalPlayer
+local Mouse = LP:GetMouse()
 local MouseMovement = Enum.UserInputType.MouseMovement
 local MouseButton1 = Enum.UserInputType.MouseButton1
 local Touch = Enum.UserInputType.Touch
+
+if _G.Load then
+    game.CoreGui.UI:Destroy()
+else
+    _G.Load = true
+end
 
 local UI = Instance.new("ScreenGui")
 UI.Name = "UI"
